@@ -28,7 +28,7 @@ const AboutMe: React.FC = () => {
   };
 
   // Trạng thái hiển thị nội dung
-  const [selectedContent, setSelectedContent] = useState<string>(contents.introduction);
+  const selectedContent = contents.introduction;
   const [isExpanded, setIsExpanded] = useState<boolean>(true); // Trạng thái để theo dõi việc thu gọn và xem thêm
 
   // Hàm xử lý chuyển đổi giữa thu gọn và xem thêm
@@ -61,18 +61,7 @@ const AboutMe: React.FC = () => {
   );
 };
 
-// CSS cho nút
-const buttonStyle: React.CSSProperties = {
-  padding: "10px 20px",
-  margin: "0 10px",
-  border: "none",
-  borderRadius: "5px",
-  backgroundColor: "#b3b6b9",
-  color: "#fff",
-  cursor: "pointer",
-  fontSize: "16px",
-  fontWeight: "bold",
-};
+
 
 // CSS cho khung nội dung
 const contentStyle: React.CSSProperties = {
