@@ -25,11 +25,7 @@ import ExperienceCard from './experience-card';
 import EducationCard from './education-card';
 import CertificationCard from './certification-card';
 import { GithubProject } from '../interfaces/github-project';
-import GithubProjectCard from './github-project-card';
-import ExternalProjectCard from './external-project-card';
-import BlogCard from './blog-card';
 import Footer from './footer';
-import PublicationCard from './publication-card';
 import Slider from './slider/slider';
 import avatar from '../assets/avatar.png'; 
 import AboutMe from './About/aboutMe';
@@ -49,7 +45,7 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
-
+  console.log(githubProjects)
   const getGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {
       if (sanitizedConfig.projects.github.mode === 'automatic') {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Carousel, Button } from "antd";
-import avatar from '../../assets/avatar.png';
 import qcs1 from '../../assets/qcs1.png';
 import qcs2 from '../../assets/qcs2.png';
 import qcs0 from '../../assets/qcs0.png';
@@ -45,7 +44,7 @@ const projects: Project[] = [
         tittle: 'Quản lí nhà máy',
         tech: ['ReactJS', 'NodeJS', 'Docker', 'MongoDB'],
         description: ['Quản lí thiết bị', 'Quản lí thiết bị', 'Ca làm việc của nhân viên', 'Điều khiển thiết bị', 'Quản lí trạng thái máy', 'Thông báo tới nhân viên', 'Các thống kê về máy'],
-        image: [qcs0, qcs7, qcs2, qcs3, qcs4, qcs5, qcs6, qcs0],
+        image: [qcs0, qcs7, qcs2, qcs3, qcs4, qcs5, qcs6, qcs1],
         show: '1. Phát triển toàn giao diện phần mềm , 2. Phát triển Database , 3. Phát triển Api kèm các service xử lí dữ liệu , 4. Xây dựng các service xử lí dữ liệu , 5. Deploy và xây dựng quản lí network với docker',
         type: 0,
         git: '',
@@ -69,7 +68,7 @@ const projects: Project[] = [
         tittle: 'Trang web bán đồ thể thao',
         tech: ['.Net', 'MySQL', 'ReactJS'],
         description: ['Trang chủ', 'Trang sản phẩm', 'Trang chi tiết sản phẩm', 'Trang so sánh', 'Trang đơn hàng', 'Trang thanh toán', 'Trang giao dịch', 'Trang quản lí sản phẩm', 'Trang quản lí thuộc tính', 'Trang quản lí đơn hàng', 'Trang thống kê'],
-        image: [ashHome, ashShop, ashDetail, compare, ashOrder, ashPayment, ashPay, ashAddProduct, ashManageOrder, ashAnalysis],
+        image: [ashHome, ashShop, ashDetail, compare, ashOrder, ashPayment, ashPay, ashAddProduct, ashAddAttribute, ashManageOrder, ashAnalysis],
         show: '1. Phát triển giao diện người dùng , 2. Phát triển Giao diện quản lí , 3. Phát triển Api kèm các service xử lí sản phẩm và đơn hàng, 5. Phân quyền các tác vụ giữa admin với manager , 6. Quản lí các thuộc tính của sản phẩm , 7. Deploy và xây dựng quản lí network , 8. Xây dựng giao diện Figma',
         type: 0,
         git: '',
@@ -189,31 +188,6 @@ const Slider: React.FC = () => {
                         autoplay
                         dots
                         dotPosition="left"
-                        dotsRender={(dots) => (
-                            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                {dots.map((dot, index) => (
-                                    <div
-                                        key={index}
-                                        style={{
-                                            margin: '0 5px',
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            alignItems: 'center',
-                                            width: '30px',
-                                            height: '30px',
-                                            backgroundColor: dot.props.className.includes('slick-active') ? '#4caf50' : '#ccc',
-                                            borderRadius: '50%',
-                                            color: '#fff',
-                                            fontWeight: 'bold',
-                                            fontSize: '16px',
-                                            cursor: 'pointer',
-                                        }}
-                                    >
-                                        {index + 1}
-                                    </div>
-                                ))}
-                            </div>
-                        )}
                     >
                         {/* Slide đầu tiên hiển thị nội dung show */}
                         <div key="show-slide">
